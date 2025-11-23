@@ -542,6 +542,9 @@
     </style>
 </head>
 <body>
+   <audio autoplay loop muted>
+    <source src="audio/bekburner.mp3" type="audio/mpeg">
+</audio>
     <!-- FLOATING STICKERS -->
     <div class="sticker">⭐</div>
     <div class="sticker">🎈</div>
@@ -558,7 +561,7 @@
         <div class="tab-navigation">
             <button class="tab-btn active" onclick="switchTab('home')">🏠 Home</button>
             <button class="tab-btn" onclick="switchTab('gallery')">📸 Gallery</button>
-            <button class="tab-btn" onclick="switchTab('quotes')">💌 Quotes</button>
+            <button class="tab-btn" onclick="switchTab('quotes')">💌 Your Quotes In Here</button>
             <button class="tab-btn" onclick="switchTab('about')">👥 About Us</button>
         </div>
         
@@ -568,7 +571,7 @@
                 <div class="stat-label">FRIENDS</div>
             </div>
             <div class="stat-box">
-                <div class="stat-number">1460</div>
+                <div class="stat-number">infinite</div>
                 <div class="stat-label">Hari Bersama</div>
             </div>
         </div>
@@ -576,21 +579,23 @@
 
     <!-- FILTERS -->
     <div class="filters tab-content active" id="homeTab">
-        <button class="filter-btn active" onclick="filterMemories('all')">Semua 📸</button>
-        <button class="filter-btn" onclick="filterMemories('trip')">Field Trip 🚌</button>
-        <button class="filter-btn" onclick="filterMemories('party')">Pesta 🎉</button>
-        <button class="filter-btn" onclick="filterMemories('study')">Belajar 📚</button>
-        <button class="filter-btn" onclick="filterMemories('fun')">Seru-seruan 🤪</button>
+        <button class="filter-btn active" onclick="filterMemories('all')">All Activity 📸</button>
+        <button class="filter-btn" onclick="filterMemories('trip')">Events outside of class 🚌</button>
+        <button class="filter-btn" onclick="filterMemories('party')">One class photo 📸</button>
+        <button class="filter-btn" onclick="filterMemories('study')">Study 📚</button>
+        <button class="filter-btn" onclick="filterMemories('fun')">Exciting Activities 🤪</button>
     </div>
 
     <!-- MEMORY WALL -->
     <div class="memory-wall tab-content active" id="memoryWall">
         <div class="memory-card" data-category="trip">
-            <div class="memory-category">Field Trip</div>
+            <div class="memory-category">Events outside of class</div>
             <div class="polaroid" onclick="openModal('trip1')">
-                <div class="memory-photo">🏔</div>
-                <div class="memory-caption">Study tour ke Bandung! Seru banget guys!</div>
-                <div class="memory-date">15 Agustus 2024</div>
+                <div class="memory-photo">
+    <img src="amba.jpg" alt="Study tour ke Bandung">
+</div>
+                <div class="memory-caption">Graphic design class visit to the museum</div>
+                <div class="memory-date">1 Desember 2025</div>
             </div>
             <div class="reactions">
                 <button class="reaction-btn" onclick="addReaction(this)">❤️ <span class="reaction-count">24</span></button>
@@ -600,11 +605,11 @@
         </div>
 
         <div class="memory-card" data-category="party">
-            <div class="memory-category">Pesta</div>
+            <div class="memory-category">One class photo</div>
             <div class="polaroid" onclick="openModal('party1')">
-                <div class="memory-photo" style="background: linear-gradient(135deg, #f093fb, #f5576c)">🎂</div>
-                <div class="memory-caption">Ultah Sarah! Kue-nya enak banget 😋</div>
-                <div class="memory-date">22 September 2024</div>
+                <div class="memory-photo" style="background: linear-gradient(149deg, #f093fb, #f5576c)">🎂</div>
+                <div class="memory-caption">ADMISSION OF STUDENT</div>
+                <div class="memory-date">27 September 2025</div>
             </div>
             <div class="reactions">
                 <button class="reaction-btn" onclick="addReaction(this)">❤️ <span class="reaction-count">31</span></button>
@@ -642,11 +647,55 @@
         </div>
 
         <div class="memory-card" data-category="party">
-            <div class="memory-category">Pesta</div>
+            <div class="memory-category">One Class Photo</div>
             <div class="polaroid" onclick="openModal('party2')">
                 <div class="memory-photo" style="background: linear-gradient(135deg, #a8edea, #fed6e3)">🎊</div>
-                <div class="memory-caption">Farewell party! Nangis semua deh 😭</div>
-                <div class="memory-date">20 November 2024</div>
+                <div class="memory-caption">CAFE EDITION</div>
+                <div class="memory-date">27 September 2025</div>
+            </div>
+            <div class="reactions">
+                <button class="reaction-btn" onclick="addReaction(this)">❤️ <span class="reaction-count">32</span></button>
+                <button class="reaction-btn" onclick="addReaction(this)">😂 <span class="reaction-count">11</span></button>
+                <button class="reaction-btn" onclick="addReaction(this)">🔥 <span class="reaction-count">25</span></button>
+            </div>
+        </div>
+
+
+        <div class="memory-card" data-category="party">
+            <div class="memory-category">One Class Photo</div>
+            <div class="polaroid" onclick="openModal('party2')">
+                <div class="memory-photo" style="background: linear-gradient(135deg, #a8edea, #fed6e3)">🎊</div>
+                <div class="memory-caption">GACOAN EDITION</div>
+                <div class="memory-date">4 November 2025</div>
+            </div>
+            <div class="reactions">
+                <button class="reaction-btn" onclick="addReaction(this)">❤️ <span class="reaction-count">32</span></button>
+                <button class="reaction-btn" onclick="addReaction(this)">😂 <span class="reaction-count">11</span></button>
+                <button class="reaction-btn" onclick="addReaction(this)">🔥 <span class="reaction-count">25</span></button>
+            </div>
+        </div>
+
+
+        <div class="memory-card" data-category="party">
+            <div class="memory-category">One Class Photo</div>
+            <div class="polaroid" onclick="openModal('party2')">
+                <div class="memory-photo" style="background: linear-gradient(135deg, #a8edea, #fed6e3)">🎊</div>
+                <div class="memory-caption">UNIVERSITAS SAINS INDONESIA</div>
+                <div class="memory-date">30 Oktober 2025</div>
+            </div>
+            <div class="reactions">
+                <button class="reaction-btn" onclick="addReaction(this)">❤️ <span class="reaction-count">32</span></button>
+                <button class="reaction-btn" onclick="addReaction(this)">😂 <span class="reaction-count">11</span></button>
+                <button class="reaction-btn" onclick="addReaction(this)">🔥 <span class="reaction-count">25</span></button>
+            </div>
+        </div>
+
+<div class="memory-card" data-category="party">
+            <div class="memory-category">One Class Photo</div>
+            <div class="polaroid" onclick="openModal('party2')">
+                <div class="memory-photo" style="background: linear-gradient(135deg, #a8edea, #fed6e3)">🎊</div>
+                <div class="memory-caption">EXAM EDITION</div>
+                <div class="memory-date">18 November 2025</div>
             </div>
             <div class="reactions">
                 <button class="reaction-btn" onclick="addReaction(this)">❤️ <span class="reaction-count">32</span></button>
@@ -656,11 +705,11 @@
         </div>
 
         <div class="memory-card" data-category="trip">
-            <div class="memory-category">Field Trip</div>
+            <div class="memory-category">Events Outside Of class</div>
             <div class="polaroid" onclick="openModal('trip2')">
-                <div class="memory-photo" style="background: linear-gradient(135deg, #30cfd0, #330867)">🏖️</div>
-                <div class="memory-caption">Pantai Anyer! Air lautnya dingin banget</div>
-                <div class="memory-date">3 September 2024</div>
+                <div class="memory-photo" style="background: linear-gradient(135deg, #30cfd0, #330867)">?</div>
+                <div class="memory-caption">COMMING SOON GUYS</div>
+                <div class="memory-date">?? ???? ????</div>
             </div>
             <div class="reactions">
                 <button class="reaction-btn" onclick="addReaction(this)">❤️ <span class="reaction-count">26</span></button>
